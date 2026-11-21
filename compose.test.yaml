@@ -1,0 +1,23 @@
+# Local test of the Railway wrapper (not used by Railway).
+services:
+  mysql:
+    image: mysql:8.4.13@sha256:a81d043930e51745522bd5c430961cf8286f0a23f0a9a2a6e0108f7ea71b0902
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    environment:
+      MYSQL_DATABASE: loopforge
+      MYSQL_ROOT_PASSWORD: testrootpw1234567890
+    volumes: [mysql-data:/var/lib/mysql]
+  loopforge:
+    build: .
+    ports: ["8090:8080"]
+    environment:
+      PORT: "8080"
+      AGENTFLOW_MYSQL_DSN: root:testrootpw1234567890@tcp(mysql:3306)/loopforge
+      AGENTFLOW_SESSION_SECRET: localtestsecret0123456789abcdef0123456789abcdef
+      AGENTFLOW_SECURE_COOKIES: "false"
+      LOOPFORGE_ADMIN_PASSWORD: localAdminPw123
+    volumes: [lf-data:/data]
+    depends_on: [mysql]
+volumes:
+  mysql-data:
+  lf-data:
