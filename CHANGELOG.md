@@ -2,6 +2,10 @@
 
 Each entry lists breaking changes first. Read it before you apply an update in Railway.
 
+## 0.4.0-1 (2026-11-21)
+
+No breaking changes. Adds the Deploy on Railway button (template `loopforge-1`) to the README. Nothing else changes; no update is needed.
+
 ## 0.4.0 (2026-11-21)
 
 First release of this template.

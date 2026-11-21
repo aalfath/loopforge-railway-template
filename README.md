@@ -1,5 +1,7 @@
 # LoopForge on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/loopforge-1?utm_medium=integration&utm_source=button&utm_campaign=loopforge)
+
 A Railway template for [LoopForge](https://github.com/Tencent/LoopForge) by Tencent: a self-hosted, browser-based workspace that runs coding agents (CodeBuddy, Codex, Claude Code and others) through repeatable SOP workflows with scripts and human approval gates.
 
 **Version:** LoopForge **0.4.0** (`ghcr.io/tencent/loopforge:0.4.0@sha256:87b6a3e3cba201d03f8f8d22929881f576021fc78c7c42e82f78329abbf4bda4`) with MySQL **8.4.13**.
